@@ -52,15 +52,15 @@ p,.st-desc,.wnote,.wtemp,.callout p,.sec-sub,.drive-l small,.alert p,.bonus p,.s
 .lakewrap{position:absolute;left:0;right:0;bottom:0;height:25%;background:linear-gradient(180deg,#0f4a42 0%,#0b352f 55%,#082019 100%);overflow:hidden;z-index:1}
 .lakewrap::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(143,227,207,.03) 0 2px,rgba(143,227,207,0) 2px 10px);mix-blend-mode:screen;animation:shimmer 6s linear infinite}
 @keyframes shimmer{to{transform:translateY(10px)}}
-.hero-inner{position:relative;z-index:5;width:100%;max-width:1080px;margin:0 auto;padding:0 26px 8vh}
+.hero-inner{position:relative;z-index:5;width:100%;max-width:1080px;margin:0 auto;padding:0 26px 13vh}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:#8fe3cf;display:flex;align-items:center;gap:.7em;margin-bottom:1.1rem}
 .eyebrow::before{content:"";width:34px;height:1px;background:#e6a94a}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(3rem,10.5vw,7.6rem);line-height:.9;letter-spacing:-.02em;color:#f6faf6}
 .hero h1 .dot{color:#e6a94a}
-.couple{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.5rem,4.6vw,2.7rem);color:#ffe0c2;margin-top:1.2rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.couple{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.5rem,4.6vw,2.7rem);color:#ffe0c2;margin-top:.8rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .couple svg{flex-shrink:0}
 .hero .lede{font-size:clamp(1rem,2.3vw,1.3rem);max-width:32ch;color:#bcd6cd;margin-top:1rem}
-.hero-meta{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;margin-top:1.9rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;margin-top:1.3rem}
 .hm{display:flex;flex-direction:column;gap:.15rem}
 .hm span{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#7d968d}
 .hm strong{font-family:var(--serif);font-weight:500;font-size:1.12rem;color:#f2f6f1}
@@ -69,14 +69,13 @@ p,.st-desc,.wnote,.wtemp,.callout p,.sec-sub,.drive-l small,.alert p,.bonus p,.s
 @keyframes bob{50%{transform:translate(-50%,7px)}}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(8,28,24,.85);border-bottom:1px solid rgba(143,227,207,.14);transform:translateY(-100%);transition:transform .35s ease}
+.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(8,28,24,.9);border-bottom:1px solid rgba(143,227,207,.14);transform:translateY(-100%);transition:transform .35s ease}
 .nav.show{transform:translateY(0)}
-.nav-in{max-width:1080px;margin:0 auto;padding:.7rem 26px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.nav-brand{font-family:var(--serif);font-weight:600;font-size:1rem;color:#f2f6f1;white-space:nowrap}
-.nav-brand b{color:#e6a94a}
-.nav-links{display:flex;gap:.15rem;flex-wrap:wrap;justify-content:flex-end}
-.nav-links a{font-family:var(--mono);font-size:.7rem;color:#bcd6cd;text-decoration:none;padding:.35rem .5rem;border-radius:7px;transition:.2s;white-space:nowrap}
-.nav-links a:hover{color:#fff;background:rgba(143,227,207,.1)}
+.nav-in{max-width:1080px;margin:0 auto;padding:.55rem 14px;display:flex;gap:.5rem;align-items:center;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-in a{flex:0 0 auto;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:#dcece6;text-decoration:none;padding:.42rem .85rem;border-radius:999px;border:1px solid rgba(143,227,207,.22);background:rgba(143,227,207,.06);white-space:nowrap;transition:.2s}
+.nav-in a:hover,.nav-in a:active{color:#0a221d;background:#8fe3cf;border-color:#8fe3cf}
+.chapter,#sbalit,#prsi{scroll-margin-top:62px}
 
 /* HEADINGS */
 .sec-head{margin-bottom:1.8rem}
@@ -137,7 +136,7 @@ p,.st-desc,.wnote,.wtemp,.callout p,.sec-sub,.drive-l small,.alert p,.bonus p,.s
 .stop{position:relative;border-radius:14px}
 .stop::before{content:"";position:absolute;left:-2.3rem;top:1.15rem;width:20px;height:20px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent2);box-shadow:0 0 0 4px var(--bg2);z-index:1}
 .stop.peak::before{border-color:var(--accent);background:var(--accent)}
-.stop.meal-node::before{border-color:var(--accent);background:transparent}
+.stop.meal-node::before{border-color:var(--accent);background:var(--accent)}
 .stop-head{width:100%;text-align:left;background:none;border:0;color:inherit;cursor:pointer;padding:1rem .9rem 1rem 0;display:flex;gap:1rem;align-items:flex-start}
 .stop-head .body{flex:1;min-width:0}
 .time{font-family:var(--mono);font-size:.74rem;color:var(--accent2);font-weight:700;letter-spacing:.02em}
@@ -213,7 +212,7 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
 
 @media(max-width:820px){
   .bonus-grid,.split{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .nav-in{justify-content:flex-start}
   .chapter{padding:4rem 0}
   .hero-meta{gap:1.1rem 1.6rem}
   .drive{flex-direction:column;align-items:stretch;gap:.8rem}
@@ -225,7 +224,7 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
 @media(max-width:480px){
   .inner{padding:0 18px}
   .chapter{padding:3.4rem 0}
-  .hero-inner{padding:0 18px 7vh}
+  .hero-inner{padding:0 18px 11vh}
   .hero-meta{gap:1rem 1.4rem}
   .couple{gap:.35rem}
   .couple svg{width:26px;height:26px}
@@ -270,26 +269,20 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
   <div class="ridge r3" data-speed="0.34"><svg viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="#0f3f37" d="M0,300 L0,210 L140,150 L280,200 L420,120 L560,190 L720,90 L900,180 L1060,130 L1220,200 L1360,150 L1440,190 L1440,300 Z"/></svg></div>
   <div class="lakewrap"></div>
   <div class="hero-inner">
-    <div class="eyebrow">Náš výlet ve dvou · Polské Tatry</div>
     <h1>Białka<br>Tatrzańska<span class="dot">.</span></h1>
     <div class="couple">Adámek
       <svg width="34" height="34" viewBox="0 0 24 24" fill="#e8a0b0"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg>
       Karin</div>
-    <p class="lede">Tři dny jen my dva. Ledovcová jezera, tyrkysová řeka, hrady nad vodou a večery ve wellness.</p>
     <div class="hero-meta">
       <div class="hm"><span>Termín</span><strong>22.–24. 7. 2026</strong></div>
       <div class="hm"><span>Základna</span><strong>Białka Tatrzańska</strong></div>
       <div class="hm"><span>Ze Svitav</span><strong>~300 km · ~4,5 h</strong></div>
     </div>
   </div>
-  <div class="scrollcue">Sjeď dolů<span></span></div>
 </header>
 
 <nav class="nav" id="nav"><div class="nav-in">
-  <div class="nav-brand">Adámek <b>&amp;</b> Karin</div>
-  <div class="nav-links">
-    <a href="#den1">Den 1</a><a href="#den2">Den 2</a><a href="#den3">Den 3</a><a href="#vyslapy">Bonus</a><a href="#rozpocet">Rozpočet</a><a href="#pocasi">Počasí</a>
-  </div>
+  <a href="#den1">Den 1</a><a href="#den2">Den 2</a><a href="#den3">Den 3</a><a href="#sbalit">Sbalit</a><a href="#prsi">Když prší</a>
 </div></nav>
 
 <!-- ===== DEN 1 ===== -->
@@ -307,9 +300,9 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
     <div class="callout reveal"><div class="ico">💡</div><div><h4>Chytré využití času</h4><p>Check-in je až v 16:00, tak čas do té doby vyplníte hrady u jezera Czorsztyn (jsou zhruba po cestě od Nowého Targu). Pak teprve do Białky na ubytování. Den je nabitý, ale všechno je blízko sebe.</p></div></div>
 
     <div class="trail reveal">
-      <div class="stop"><button class="stop-head"><div class="body"><div class="time">12:30–13:00</div><div class="st-title">🚗 Příjezd &amp; rychlý oběd</div><div class="st-desc">Dorazíte k jezeru Czorsztyn. Dejte rychlý oběd u jezera nebo cestou. Ubytování v Białce až v 16:00, tak zatím k hradům.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Oběd si řešíte sami</span></div></div></div></div>
-      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">13:00–14:00</div><div class="st-title">🏰 Hrad Niedzica (Dunajec)</div><div class="st-desc">Nejhezčí hrad nad jezerem, tyrkysová voda pod hradbami. Prohlídka s průvodcem ~1 h (zámek + vozovna). Otevřeno denně <b>9:00–19:00</b>. Vstupy jsou na konkrétní čas a v sezoně se plní — <b>kup lístek online předem</b>.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ ~28 zł · sníženo ~22 zł</span><span class="tag">🕘 9:00–19:00 (1.5.–30.9.)</span><span class="tag warn">⏰ Poslední vstup s průvodcem 18:00</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Dunajec+Niedzica" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://bilety.zamekniedzica.pl/" target="_blank" rel="noopener">🎟️ Koupit lístek online</a><a class="lbtn" href="https://zamekniedzica.pl/godziny-otwarcia-i-ceny-biletow.html" target="_blank" rel="noopener">🔗 Ceník &amp; hodiny</a></div></div></div></div>
-      <div class="stop"><button class="stop-head"><div class="body"><div class="time">14:00–15:00</div><div class="st-title">🚠 Gondola + zřícenina Czorsztyn (+ loďka)</div><div class="st-desc">Přes jezero přeplavete lodí přímo mezi oba hrady. Na druhé straně zřícenina hradu <b>Czorsztyn</b> s výhledem zpět na Niedzici. Kdyby zbyl čas, u přístavu si můžete půjčit loďku/kajak.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ Přeprava ~7 / ~14 zł/os.</span><span class="tag">🏰 Czorsztyn ~10 zł/os.</span><span class="tag">🕘 Gondola 9:00–18:00 (7.–8. m.)</span><span class="tag">🚤 Loďky · volitelně</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Czorsztyn+ruiny" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://zalewczorsztynski.com/" target="_blank" rel="noopener">🔗 Gondola &amp; půjčovna</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">12:30–13:15</div><div class="st-title">🍽️ Oběd u hradu — Karczma Zadyma</div><div class="st-desc">Dorazíte k jezeru. Hned pod hradem Niedzica je <b>Zadyma</b> — góralská karczma s vlastním pivovarem, velké porce a férové ceny. Ideální oběd na start (otevřeno od 11:00).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Hlavní jídlo ~40–70 zł/os</span><span class="tag">🕘 Od 11:00</span><span class="tag">⭐ 4,3 · góral + pivovar</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zadyma+Niedzica+Widokowa+5" target="_blank" rel="noopener">📍 Navigovat</a></div></div></div></div>
+      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">13:15–14:15</div><div class="st-title">🏰 Hrad Niedzica (Dunajec)</div><div class="st-desc">Nejhezčí hrad nad jezerem, tyrkysová voda pod hradbami. Prohlídka s průvodcem ~1 h (zámek + vozovna). Otevřeno denně <b>9:00–19:00</b>. Vstupy jsou na konkrétní čas a v sezoně se plní — <b>kup lístek online předem</b>.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ ~28 zł · sníženo ~22 zł</span><span class="tag">🕘 9:00–19:00 (1.5.–30.9.)</span><span class="tag warn">⏰ Poslední vstup s průvodcem 18:00</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Dunajec+Niedzica" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://bilety.zamekniedzica.pl/" target="_blank" rel="noopener">🎟️ Koupit lístek online</a><a class="lbtn" href="https://zamekniedzica.pl/godziny-otwarcia-i-ceny-biletow.html" target="_blank" rel="noopener">🔗 Ceník &amp; hodiny</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">14:15–15:00</div><div class="st-title">🚠 Gondola + zřícenina Czorsztyn (+ loďka)</div><div class="st-desc">Přes jezero přeplavete lodí přímo mezi oba hrady. Na druhé straně zřícenina hradu <b>Czorsztyn</b> s výhledem zpět na Niedzici. Kdyby zbyl čas, u přístavu si můžete půjčit loďku/kajak.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ Přeprava ~7 / ~14 zł/os.</span><span class="tag">🏰 Czorsztyn ~10 zł/os.</span><span class="tag">🕘 Gondola 9:00–18:00 (7.–8. m.)</span><span class="tag">🚤 Loďky · volitelně</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Czorsztyn+ruiny" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://zalewczorsztynski.com/" target="_blank" rel="noopener">🔗 Gondola &amp; půjčovna</a></div></div></div></div>
       <div class="stop meal-node"><button class="stop-head"><div class="body"><div class="time">15:15–18:00</div><div class="st-title">🛎️ Přejezd do Białky, check-in &amp; večeře</div><div class="st-desc">~40 min do Białky, check-in <b>16:00</b>, pak večeře v hotelu (okno <b>16:00–18:00</b>, máte v ceně).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag warn">🍽️ Večeře jen do 18:00</span><span class="tag">🛎️ Check-in 16:00</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/dir/?api=1&origin=Zamek+Dunajec+Niedzica&destination=Bia%C5%82ka+Tatrza%C5%84ska" target="_blank" rel="noopener">🧭 Trasa do Białky (~40 min)</a></div></div></div></div>
       <div class="stop"><button class="stop-head"><div class="body"><div class="time">18:15–19:00</div><div class="st-title">🚡 Lanovka Kotelnica (večerní výhled)</div><div class="st-desc">Letní lanovka přímo v obci. <b>V úterý jede do 19:00</b>, po večeři stihnete poslední jízdu na večerní panorama Tater. <b>Není to na západ slunce</b> (ten je ~20:45, to už nejede).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ 33 zł/os. zpáteční</span><span class="tag">🕘 Po–čt 10:00–19:00</span><span class="tag warn">⏰ Poslední jízda ~18:30</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Kotelnica+Bia%C5%82cza%C5%84ska+dolna+stacja" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://bialkatatrzanska.pl/en/summer/price-list/" target="_blank" rel="noopener">🔗 Ceník lanovky</a></div></div></div></div>
       <div class="stop"><button class="stop-head"><div class="body"><div class="time">19:15–20:15</div><div class="st-title">💧 Przełom Białki za zlatého světla</div><div class="st-desc">Přírodní rezervace 10 min od hotelu, kde si řeka prořezala vápencovou soutěsku. Tyrkysová voda, bílé balvany — nejfotogeničtější místo v okolí, večer nádherné světlo. Kdybyste byli po cestě unavení, klidně vynechte.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag free">🎟️ Zdarma</span><span class="tag">📸 Zlatá hodina</span><span class="tag">⏱️ ~1 h</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Rezerwat+Prze%C5%82om+Bia%C5%82ki" target="_blank" rel="noopener">📍 Navigovat</a></div></div></div></div>
@@ -370,7 +363,7 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
     <div class="trail reveal">
       <div class="stop"><button class="stop-head"><div class="body"><div class="time">8:00–9:15</div><div class="st-title">🍳 Snídaně &amp; check-out</div><div class="st-desc">Snídaně v hotelu (8–10, v ceně), sbalit z pokoje, check-out a vyrazit ~9:15 do Zakopaného (~35 min).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍳 Snídaně do 10:00 (v ceně)</span></div></div></div></div>
       <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">10:00–12:30</div><div class="st-title">🌳 Dolina Białego</div><div class="st-desc">Lehká romantická procházka u Zakopaného — vodopády, potok, les. Klidný start dne po náročné túře, ~2–2,5 h, zdarma. Dá se propojit s vyhlídkou nebo zkrátit.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag free">🎟️ Zdarma</span><span class="tag">⏱️ ~2–2,5 h · lehké</span><span class="tag">💧 Vodopády, potok</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Dolina+Bia%C5%82ego+Zakopane" target="_blank" rel="noopener">📍 Navigovat</a></div></div></div></div>
-      <div class="stop meal-node"><button class="stop-head"><div class="body"><div class="time">12:45–13:45</div><div class="st-title">🍽️ Oběd na Krupówkách</div><div class="st-desc">Pozdní oběd v některé z góralských restaurací na promenádě Krupówki. Vyzkoušejte oscypky, kwaśnicu nebo placki.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Oběd si řešíte sami</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Krup%C3%B3wki+Zakopane" target="_blank" rel="noopener">📍 Krupówki</a></div></div></div></div>
+      <div class="stop meal-node"><button class="stop-head"><div class="body"><div class="time">12:45–13:45</div><div class="st-title">🍽️ Oběd na Krupówkách</div><div class="st-desc">Pozdní oběd v góralské karczmě na promenádě. Tip: <b>Karczma Góraleczka</b> (Krupówki 22b, velké porce, živá muzika), nebo <b>Góralski Browar</b> (Krupówki 40, výhled na Tatry z terasy). Vyzkoušejte oscypky, kwaśnicu, žebra.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Hlavní jídlo ~45–75 zł/os</span><span class="tag">⭐ Góraleczka 4,5 · Browar 4,5</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Karczma+G%C3%B3raleczka+Krup%C3%B3wki+Zakopane" target="_blank" rel="noopener">📍 Góraleczka</a><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=G%C3%B3ralski+Browar+Krup%C3%B3wki+Zakopane" target="_blank" rel="noopener">📍 Góralski Browar (výhled)</a></div></div></div></div>
       <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">13:45–16:30</div><div class="st-title">🚠 Gubałówka + Krupówki + oscypki</div><div class="st-desc">Pozemní lanovka <b>Gubałówka</b> (3,5 min nahoru) na panorama Tater — Giewont, Zakopane jako na dlani. Nahoře vyhlídkové terasy. Dole procházka po <b>Krupówkách</b>, nákup pravých <b>oscypků</b>. Spodní stanice je přímo v centru.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ ~44 zł/os zpáteční (online)</span><span class="tag">🕘 Lanovka 9:00–20:00</span><span class="tag">🅿️ Parking ~20 zł/den</span><span class="tag warn">⏰ V sezoně kup lístek online</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Kolej+Gubalowka+dolna+stacja" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://www.pkl.pl/gubalowka" target="_blank" rel="noopener">🎟️ Koupit lístek (PKL)</a></div></div></div></div>
     </div>
 
@@ -431,7 +424,7 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
           <a class="lbtn" href="https://meteo.imgw.pl/" target="_blank" rel="noopener">🔗 meteo IMGW</a>
         </div>
       </div>
-      <div class="block list">
+      <div class="block list" id="prsi">
         <h4>🌧️ Když bude lít</h4>
         <ul>
           <li>Přehodit dny: hrady, Zakopane a wellness na deštivý den, hory na ten hezký.</li>
@@ -442,7 +435,7 @@ footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2re
         </ul>
       </div>
     </div>
-    <div class="block reveal" style="margin-top:1.2rem">
+    <div class="block reveal" id="sbalit" style="margin-top:1.2rem">
       <h4>🎒 Sbal a odškrtej</h4>
       <ul class="check" id="checklist">
         <li><span class="box">✓</span> Rezervace parkoviště Palenica (v mobilu)</li>
