@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Náš výlet · Białka Tatrzańska · 22.–24. 7. 2026</title>
+<meta name="description" content="Adámek & Karin · tři dny v polských Tatrách, 22.–24. 7. 2026">
+<!-- PWA / na plochu telefonu -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0c3a2f">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Náš výlet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono","SFMono-Regular",ui-monospace,monospace;
+  --shadow:0 22px 55px -26px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:#0a221d;color:#f2f6f1;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--accent,#e6a94a);color:#0a221d}
+p,.st-desc,.wnote,.wtemp,.callout p,.sec-sub,.drive-l small,.alert p,.bonus p,.st-title,.brow .lbl{overflow-wrap:break-word}
+
+.chapter{background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--ink);padding:5.5rem 0}
+.inner{max-width:1080px;margin:0 auto;padding:0 26px}
+.c-lake{--bg:#0f5c85;--bg2:#0b466a;--ink:#f0f7fb;--muted:#a7cfe4;--accent:#f4b74e;--accent2:#63cbe8;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.16);--warnbg:rgba(224,103,63,.18)}
+.c-alpine{--bg:#0c3a2f;--bg2:#082821;--ink:#eef6f0;--muted:#9dc2b3;--accent:#e6a94a;--accent2:#7fe3cf;--card:rgba(255,255,255,.055);--line:rgba(143,227,207,.17);--warnbg:rgba(224,103,63,.17)}
+.c-rose{--bg:#8a4a5c;--bg2:#6f3a49;--ink:#fdeef2;--muted:#e3bdc9;--accent:#ffcf8a;--accent2:#a7dcc4;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.17);--warnbg:rgba(224,103,63,.2)}
+.c-meadow{--bg:#e8efd9;--bg2:#dde8c6;--ink:#26361c;--muted:#57683f;--accent:#c07a1c;--accent2:#4e7a2f;--card:#ffffff;--line:rgba(38,54,28,.12);--warnbg:#f0e5cf}
+.c-money{--bg:#f6ecd5;--bg2:#efe0be;--ink:#3a2a10;--muted:#8a6f3f;--accent:#b8791f;--accent2:#a9862c;--card:#fffdf7;--line:rgba(58,42,16,.13);--warnbg:#f3ddc6}
+.c-rain{--bg:#24404f;--bg2:#1b303d;--ink:#eef4f8;--muted:#a7bccb;--accent:#f4b74e;--accent2:#7fbfe0;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--warnbg:rgba(224,103,63,.16)}
+
+/* HERO */
+.hero{position:relative;height:100svh;min-height:660px;overflow:hidden;display:flex;align-items:flex-end}
+.sky{position:absolute;inset:0;background:radial-gradient(130% 95% at 74% 10%, rgba(244,196,113,.4) 0%, rgba(244,196,113,0) 46%),linear-gradient(180deg,#0a2a33 0%,#123f43 30%,#1a5a53 56%,#237a63 78%,#0d3129 100%)}
+.sun{position:absolute;top:11%;left:72%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffe7b2 0%,#f4c471 46%,rgba(244,196,113,0) 72%);filter:blur(2px);animation:floatsun 14s ease-in-out infinite}
+@keyframes floatsun{50%{transform:translateY(-14px)}}
+.hheart{position:absolute;z-index:2;opacity:.9;animation:floatheart 8s ease-in-out infinite}
+.hh1{top:20%;left:11%;animation-delay:0s}.hh2{top:33%;right:14%;animation-delay:1.6s}.hh3{top:14%;left:52%;animation-delay:.8s}.hh4{top:44%;left:26%;animation-delay:2.3s}
+@keyframes floatheart{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-13px) rotate(8deg)}}
+.ridge{position:absolute;left:0;width:100%;bottom:0;will-change:transform;z-index:1}
+.ridge svg{display:block;width:100%;height:auto}
+.r1{bottom:26%;opacity:.5}.r2{bottom:19%;opacity:.72}.r3{bottom:11%;opacity:.92}
+.lakewrap{position:absolute;left:0;right:0;bottom:0;height:25%;background:linear-gradient(180deg,#0f4a42 0%,#0b352f 55%,#082019 100%);overflow:hidden;z-index:1}
+.lakewrap::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(143,227,207,.03) 0 2px,rgba(143,227,207,0) 2px 10px);mix-blend-mode:screen;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{transform:translateY(10px)}}
+.hero-inner{position:relative;z-index:5;width:100%;max-width:1080px;margin:0 auto;padding:0 26px 8vh}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:#8fe3cf;display:flex;align-items:center;gap:.7em;margin-bottom:1.1rem}
+.eyebrow::before{content:"";width:34px;height:1px;background:#e6a94a}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(3rem,10.5vw,7.6rem);line-height:.9;letter-spacing:-.02em;color:#f6faf6}
+.hero h1 .dot{color:#e6a94a}
+.couple{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.5rem,4.6vw,2.7rem);color:#ffe0c2;margin-top:1.2rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.couple svg{flex-shrink:0}
+.hero .lede{font-size:clamp(1rem,2.3vw,1.3rem);max-width:32ch;color:#bcd6cd;margin-top:1rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;margin-top:1.9rem}
+.hm{display:flex;flex-direction:column;gap:.15rem}
+.hm span{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:#7d968d}
+.hm strong{font-family:var(--serif);font-weight:500;font-size:1.12rem;color:#f2f6f1}
+.scrollcue{position:absolute;bottom:calc(25% + 20px);left:50%;transform:translateX(-50%);z-index:8;font-family:var(--mono);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:#eef7f2;text-shadow:0 2px 12px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;gap:.55rem;animation:bob 2.4s ease-in-out infinite}
+.scrollcue span{width:2px;height:32px;border-radius:2px;background:linear-gradient(#e6a94a,rgba(230,169,74,0))}
+@keyframes bob{50%{transform:translate(-50%,7px)}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(8,28,24,.85);border-bottom:1px solid rgba(143,227,207,.14);transform:translateY(-100%);transition:transform .35s ease}
+.nav.show{transform:translateY(0)}
+.nav-in{max-width:1080px;margin:0 auto;padding:.7rem 26px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-brand{font-family:var(--serif);font-weight:600;font-size:1rem;color:#f2f6f1;white-space:nowrap}
+.nav-brand b{color:#e6a94a}
+.nav-links{display:flex;gap:.15rem;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{font-family:var(--mono);font-size:.7rem;color:#bcd6cd;text-decoration:none;padding:.35rem .5rem;border-radius:7px;transition:.2s;white-space:nowrap}
+.nav-links a:hover{color:#fff;background:rgba(143,227,207,.1)}
+
+/* HEADINGS */
+.sec-head{margin-bottom:1.8rem}
+.sec-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.6em;margin-bottom:.8rem}
+.sec-tag::before{content:"";width:22px;height:2px;background:var(--accent)}
+.sec-title{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,5.2vw,3.1rem);line-height:1.02;letter-spacing:-.015em}
+.sec-sub{color:var(--muted);max-width:62ch;margin-top:1rem;font-size:1.05rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* DAY HEADER + WEATHER + MEALS */
+.day-intro{display:flex;align-items:center;gap:1.4rem;margin-bottom:1.4rem}
+.day-emoji{font-size:3.2rem;line-height:1}
+.day-intro .meta{font-family:var(--mono);font-size:.78rem;color:var(--muted);display:flex;gap:1.1rem;flex-wrap:wrap}
+.day-intro .meta b{color:var(--accent2)}
+.wcard{display:flex;align-items:center;gap:1.1rem;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:1rem 1.3rem;margin-bottom:1.4rem}
+.wcard .wico{font-size:2.4rem;line-height:1;flex-shrink:0}
+.wcard .wbody{flex:1;min-width:0}
+.wcard .wtemp{font-family:var(--serif);font-weight:600;font-size:1.35rem;color:var(--ink);line-height:1.1}
+.wcard .wnote{color:var(--muted);font-size:.88rem;margin-top:.15rem}
+.wcard .wlink{font-family:var(--mono);font-size:.7rem;color:var(--accent2);text-decoration:none;white-space:nowrap;border:1px solid var(--line);border-radius:8px;padding:.4rem .7rem;transition:.2s}
+.wcard .wlink:hover{border-color:var(--accent2);background:color-mix(in srgb,var(--accent2) 12%,transparent)}
+.meals{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.6rem}
+.meal{font-family:var(--mono);font-size:.74rem;padding:.4rem .8rem;border-radius:9px;background:color-mix(in srgb,var(--accent2) 13%,transparent);border:1px solid color-mix(in srgb,var(--accent2) 28%,transparent);color:var(--ink);display:inline-flex;gap:.45rem;align-items:center}
+.meal.warn{background:var(--warnbg);border-color:color-mix(in srgb,#e0673f 40%,transparent)}
+
+/* DRIVE BUTTON (per-day route) */
+.drive{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);border-radius:14px;padding:1rem 1.3rem;margin:1.3rem 0;flex-wrap:wrap}
+.drive-l{display:flex;align-items:center;gap:.9rem;min-width:0}
+.drive-l .dico{font-size:1.5rem}
+.drive-l b{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--ink);display:block}
+.drive-l small{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.drive-r{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap}
+.drive-r .km{font-family:var(--mono);font-weight:700;color:var(--accent);font-size:.92rem;white-space:nowrap}
+.drive-r a{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.76rem;text-decoration:none;color:var(--ink);background:var(--accent);border-radius:9px;padding:.5rem .85rem;font-weight:700;transition:.2s;white-space:nowrap}
+.drive-r a:hover{transform:translateY(-2px)}
+
+/* ALERT (parking) */
+.alert{background:linear-gradient(135deg,#c65a34,#9c3f1f);border:1px solid rgba(255,180,140,.4);border-radius:18px;padding:1.6rem 1.7rem;box-shadow:var(--shadow);display:flex;gap:1.2rem;align-items:flex-start;color:#fff;margin-bottom:1.6rem}
+.alert .ico{font-size:2.4rem;line-height:1;flex-shrink:0}
+.alert h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:.4rem;color:#fff}
+.alert p{color:#ffe6da;font-size:.97rem}
+.alert p b{color:#fff}
+.alert a.cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;background:#fff;color:#9c3f1f;font-weight:700;text-decoration:none;padding:.6rem 1.1rem;border-radius:11px;font-size:.9rem;transition:.2s}
+.alert a.cta:hover{transform:translateY(-2px);background:#ffefe6}
+
+/* CALLOUT */
+.callout{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:15px;padding:1.4rem 1.6rem;margin-bottom:1.8rem;display:flex;gap:1.1rem;align-items:flex-start}
+.callout .ico{font-size:1.9rem;line-height:1;flex-shrink:0}
+.callout h4{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-bottom:.35rem;color:var(--ink)}
+.callout p{color:var(--muted);font-size:.95rem}
+.callout p b{color:var(--ink)}
+.callout a{color:var(--accent2);font-weight:600}
+
+/* TIMELINE / STOPS */
+.trail{position:relative;padding-left:2.3rem}
+.trail::before{content:"";position:absolute;left:9px;top:8px;bottom:16px;width:2px;background:repeating-linear-gradient(var(--accent2) 0 7px,transparent 7px 14px)}
+.stop{position:relative;border-radius:14px}
+.stop::before{content:"";position:absolute;left:-2.3rem;top:1.15rem;width:20px;height:20px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent2);box-shadow:0 0 0 4px var(--bg2);z-index:1}
+.stop.peak::before{border-color:var(--accent);background:var(--accent)}
+.stop.meal-node::before{border-color:var(--accent);background:transparent}
+.stop-head{width:100%;text-align:left;background:none;border:0;color:inherit;cursor:pointer;padding:1rem .9rem 1rem 0;display:flex;gap:1rem;align-items:flex-start}
+.stop-head .body{flex:1;min-width:0}
+.time{font-family:var(--mono);font-size:.74rem;color:var(--accent2);font-weight:700;letter-spacing:.02em}
+.st-title{font-family:var(--serif);font-weight:600;font-size:1.16rem;margin:.2rem 0 .35rem;line-height:1.2}
+.st-desc{color:var(--muted);font-size:.96rem}
+.st-desc b{color:var(--ink)}
+.stop-toggle{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--accent);font-size:.9rem;transition:.3s;margin-top:.15rem}
+.stop.open .stop-toggle{transform:rotate(45deg);background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.stop-more{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.3,.8,.3,1)}
+.stop-more-in{padding:0 .9rem 1.2rem 0}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{font-size:.76rem;font-weight:600;padding:.28rem .7rem;border-radius:9px;line-height:1;background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--ink);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.tag.warn{background:var(--warnbg);border-color:color-mix(in srgb,#e0673f 40%,transparent)}
+.tag.cash{background:color-mix(in srgb,var(--accent2) 15%,transparent);border-color:color-mix(in srgb,var(--accent2) 30%,transparent)}
+.tag.free{background:color-mix(in srgb,#3fae6a 18%,transparent);border-color:color-mix(in srgb,#3fae6a 34%,transparent)}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.85rem}
+.lbtn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.74rem;text-decoration:none;color:var(--accent2);border:1px solid var(--line);border-radius:9px;padding:.35rem .75rem;transition:.2s}
+.lbtn:hover{border-color:var(--accent2);color:var(--ink);background:color-mix(in srgb,var(--accent2) 10%,transparent)}
+.lbtn.book{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.lbtn.book:hover{background:color-mix(in srgb,var(--accent) 20%,transparent);color:var(--ink)}
+.hint{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);opacity:.7;margin-top:.5rem}
+
+/* BONUS */
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.bonus{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.6rem;transition:.25s}
+.bonus:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.bonus .em{font-size:2.1rem}
+.bonus h4{font-family:var(--serif);font-weight:600;font-size:1.22rem;margin:.9rem 0 .5rem}
+.bonus h4 small{font-family:var(--sans);font-weight:400;font-size:.72rem;color:var(--muted);display:block;margin-top:.15rem}
+.bonus p{color:var(--muted);font-size:.93rem}
+.bonus .facts{margin-top:1rem;display:flex;flex-direction:column;gap:.42rem}
+.bonus .facts div{font-family:var(--mono);font-size:.76rem;color:var(--accent2);display:flex;gap:.5rem}
+.bonus .facts div span{color:var(--muted);min-width:66px}
+.bonus a.lbtn{margin-top:1rem}
+
+/* BUDGET */
+.budget{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.brow{display:grid;grid-template-columns:1fr auto auto;gap:1rem;padding:.95rem 1.6rem;border-top:1px solid var(--line);align-items:baseline}
+.brow .lbl{color:var(--ink)}
+.brow .lbl small{display:block;color:var(--muted);font-size:.78rem;font-weight:400}
+.brow .zl,.brow .kc{font-family:var(--mono);font-size:.9rem;text-align:right;white-space:nowrap}
+.brow .zl{color:var(--accent);font-weight:700}.brow .kc{color:var(--muted)}
+.brow.head{border-top:0}
+.brow.head span{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.brow.sub{background:color-mix(in srgb,var(--accent2) 8%,transparent)}
+.brow.total{background:color-mix(in srgb,var(--accent) 14%,transparent);border-top:2px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.brow.total .lbl{font-family:var(--serif);font-weight:600;font-size:1.14rem}
+.brow.total .zl,.brow.total .kc{font-weight:700;font-size:1.02rem}
+.brow.total .kc{color:var(--ink)}
+.budget-note{color:var(--muted);font-size:.85rem;margin-top:1rem;font-style:italic}
+
+/* WEATHER GENERAL + PLAN B */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.block{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.8rem}
+.block h4{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin-bottom:1.1rem;display:flex;align-items:center;gap:.6rem}
+.block ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.block.list li{color:var(--muted);padding-left:1.4rem;position:relative;font-size:.96rem}
+.block.list li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+.block.list li b{color:var(--ink)}
+.block .links{margin-top:1.2rem}
+.check li{display:flex;gap:.75rem;align-items:flex-start;cursor:pointer;font-size:.96rem;color:var(--muted);user-select:none}
+.check li .box{flex-shrink:0;width:22px;height:22px;border-radius:7px;border:2px solid var(--muted);display:grid;place-items:center;transition:.2s;margin-top:1px;font-size:.8rem;color:var(--bg)}
+.check li.done .box{background:var(--accent2);border-color:var(--accent2)}
+.check li.done{color:color-mix(in srgb,var(--muted) 75%,transparent);text-decoration:line-through}
+
+/* CLOSING */
+.closing{position:relative;text-align:center;padding:6rem 26px 5rem;background:linear-gradient(180deg,#0d3129,#0a221d);color:#f2f6f1}
+.closing .em{font-size:2.6rem}
+.closing h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4.5vw,2.9rem);line-height:1.1;margin:1rem auto .9rem;max-width:20ch}
+.closing p{color:#bcd6cd;max-width:46ch;margin:0 auto;font-size:1.05rem}
+.closing .who{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:#ffe0c2;margin-top:1.8rem}
+footer{background:#0a221d;border-top:1px solid rgba(143,227,207,.12);padding:2rem 26px;text-align:center;color:#5f7a70;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;line-height:1.8}
+
+@media(max-width:820px){
+  .bonus-grid,.split{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .chapter{padding:4rem 0}
+  .hero-meta{gap:1.1rem 1.6rem}
+  .drive{flex-direction:column;align-items:stretch;gap:.8rem}
+  .drive-r{justify-content:space-between;width:100%}
+  .wcard{flex-wrap:wrap}
+  .wcard .wbody{flex:1 1 60%}
+  .wcard .wlink{order:3;width:100%;text-align:center;margin-top:.2rem}
+}
+@media(max-width:480px){
+  .inner{padding:0 18px}
+  .chapter{padding:3.4rem 0}
+  .hero-inner{padding:0 18px 7vh}
+  .hero-meta{gap:1rem 1.4rem}
+  .couple{gap:.35rem}
+  .couple svg{width:26px;height:26px}
+  .trail{padding-left:1.9rem}
+  .stop::before{left:-1.9rem}
+  .sec-sub{font-size:1rem}
+  .day-intro{gap:1rem}
+  .day-emoji{font-size:2.6rem}
+  .day-intro .meta{gap:.6rem 1rem;font-size:.74rem}
+  .alert{padding:1.3rem 1.2rem;gap:.9rem}
+  .alert .ico{font-size:2rem}
+  .alert h3{font-size:1.2rem}
+  .callout{padding:1.2rem 1.1rem;gap:.9rem}
+  .wcard{padding:.9rem 1.1rem;gap:.9rem}
+  .wcard .wtemp{font-size:1.15rem}
+  .wcard .wico{font-size:2rem}
+  .drive{padding:.9rem 1.1rem}
+  .drive-l b{font-size:.98rem}
+  .brow{gap:.5rem;padding:.8rem 1rem}
+  .brow .zl,.brow .kc{font-size:.8rem}
+  .brow .lbl small{font-size:.72rem}
+  .brow.total .lbl{font-size:1.05rem}
+  .budget-note{font-size:.8rem}
+  .st-title{font-size:1.08rem}
+  .block{padding:1.4rem}
+  .lbtn{font-size:.72rem;padding:.32rem .62rem}
+  .meal{font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="sky"></div><div class="sun"></div>
+  <span class="hheart hh1"><svg width="24" height="24" viewBox="0 0 24 24" fill="#e8a0b0"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg></span>
+  <span class="hheart hh2"><svg width="18" height="18" viewBox="0 0 24 24" fill="#f4c471"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg></span>
+  <span class="hheart hh3"><svg width="14" height="14" viewBox="0 0 24 24" fill="#8fe3cf"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg></span>
+  <span class="hheart hh4"><svg width="16" height="16" viewBox="0 0 24 24" fill="#e8a0b0"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg></span>
+  <div class="ridge r1" data-speed="0.12"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#237a63" d="M0,260 L0,150 L120,90 L240,140 L360,60 L520,130 L680,40 L820,120 L980,70 L1140,130 L1280,80 L1440,140 L1440,260 Z"/></svg></div>
+  <div class="ridge r2" data-speed="0.22"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#155a4f" d="M0,260 L0,180 L160,110 L300,170 L440,90 L600,160 L760,70 L920,150 L1080,95 L1240,165 L1380,110 L1440,150 L1440,260 Z"/></svg></div>
+  <div class="ridge r3" data-speed="0.34"><svg viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="#0f3f37" d="M0,300 L0,210 L140,150 L280,200 L420,120 L560,190 L720,90 L900,180 L1060,130 L1220,200 L1360,150 L1440,190 L1440,300 Z"/></svg></div>
+  <div class="lakewrap"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Náš výlet ve dvou · Polské Tatry</div>
+    <h1>Białka<br>Tatrzańska<span class="dot">.</span></h1>
+    <div class="couple">Adámek
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="#e8a0b0"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.6 2 5 5.5 5c2 0 3.3 1.1 4.5 2.7C11.2 6.1 12.5 5 14.5 5 18 5 19.7 8.6 22 11.8 19.5 16.4 12 21 12 21z"/></svg>
+      Karin</div>
+    <p class="lede">Tři dny jen my dva. Ledovcová jezera, tyrkysová řeka, hrady nad vodou a večery ve wellness.</p>
+    <div class="hero-meta">
+      <div class="hm"><span>Termín</span><strong>22.–24. 7. 2026</strong></div>
+      <div class="hm"><span>Základna</span><strong>Białka Tatrzańska</strong></div>
+      <div class="hm"><span>Ze Svitav</span><strong>~300 km · ~4,5 h</strong></div>
+    </div>
+  </div>
+  <div class="scrollcue">Sjeď dolů<span></span></div>
+</header>
+
+<nav class="nav" id="nav"><div class="nav-in">
+  <div class="nav-brand">Adámek <b>&amp;</b> Karin</div>
+  <div class="nav-links">
+    <a href="#den1">Den 1</a><a href="#den2">Den 2</a><a href="#den3">Den 3</a><a href="#vyslapy">Bonus</a><a href="#rozpocet">Rozpočet</a><a href="#pocasi">Počasí</a>
+  </div>
+</div></nav>
+
+<!-- ===== DEN 1 ===== -->
+<section class="chapter c-lake" id="den1">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Den první · Úterý 22. 7.</span><h2 class="sec-title">Hrady nad jezerem, řeka &amp; wellness</h2></div>
+    <div class="day-intro reveal"><div class="day-emoji">🏰</div><div><div class="meta"><span>Příjezd <b>~12:30</b></span><span>Tempo <b>nabité, ale blízko</b></span><span>Večer <b>wellness</b></span></div></div></div>
+
+    <div class="wcard reveal"><div class="wico">🌤️</div><div class="wbody"><div class="wtemp">~22–25 °C · údolí</div><div class="wnote">Typicky slunečno až polojasno, možná odpolední přeháňka. Večer u řeky příjemně.</div></div><a class="wlink" href="https://www.yr.no/en/forecast/daily-table/2-776144/Poland/Lesser%20Poland%20Voivodeship/Tatra%20County/Bia%C5%82ka%20Tatrza%C5%84ska" target="_blank" rel="noopener">Ověřit →</a></div>
+
+    <div class="meals reveal"><span class="meal">🚗 Příjezd ~12:30</span><span class="meal">🛎️ Check-in 16:00</span><span class="meal">🍽️ Večeře 16:00–18:00 (v ceně)</span></div>
+
+    <div class="drive reveal"><div class="drive-l"><span class="dico">🚗</span><div><b>Svitavy → hrady u jezera Czorsztyn</b><small>výjezd ~7:30, ať jste u hradů kolem 12:30</small></div></div><div class="drive-r"><span class="km">~300 km · ~4,5–5 h</span><a href="https://www.google.com/maps/dir/?api=1&origin=Svitavy&destination=Zamek+Dunajec+Niedzica" target="_blank" rel="noopener">🧭 Trasa</a></div></div>
+
+    <div class="callout reveal"><div class="ico">💡</div><div><h4>Chytré využití času</h4><p>Check-in je až v 16:00, tak čas do té doby vyplníte hrady u jezera Czorsztyn (jsou zhruba po cestě od Nowého Targu). Pak teprve do Białky na ubytování. Den je nabitý, ale všechno je blízko sebe.</p></div></div>
+
+    <div class="trail reveal">
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">12:30–13:00</div><div class="st-title">🚗 Příjezd &amp; rychlý oběd</div><div class="st-desc">Dorazíte k jezeru Czorsztyn. Dejte rychlý oběd u jezera nebo cestou. Ubytování v Białce až v 16:00, tak zatím k hradům.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Oběd si řešíte sami</span></div></div></div></div>
+      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">13:00–14:00</div><div class="st-title">🏰 Hrad Niedzica (Dunajec)</div><div class="st-desc">Nejhezčí hrad nad jezerem, tyrkysová voda pod hradbami. Prohlídka s průvodcem ~1 h (zámek + vozovna). Otevřeno denně <b>9:00–19:00</b>. Vstupy jsou na konkrétní čas a v sezoně se plní — <b>kup lístek online předem</b>.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ ~28 zł · sníženo ~22 zł</span><span class="tag">🕘 9:00–19:00 (1.5.–30.9.)</span><span class="tag warn">⏰ Poslední vstup s průvodcem 18:00</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Dunajec+Niedzica" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://bilety.zamekniedzica.pl/" target="_blank" rel="noopener">🎟️ Koupit lístek online</a><a class="lbtn" href="https://zamekniedzica.pl/godziny-otwarcia-i-ceny-biletow.html" target="_blank" rel="noopener">🔗 Ceník &amp; hodiny</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">14:00–15:00</div><div class="st-title">🚠 Gondola + zřícenina Czorsztyn (+ loďka)</div><div class="st-desc">Přes jezero přeplavete lodí přímo mezi oba hrady. Na druhé straně zřícenina hradu <b>Czorsztyn</b> s výhledem zpět na Niedzici. Kdyby zbyl čas, u přístavu si můžete půjčit loďku/kajak.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ Přeprava ~7 / ~14 zł/os.</span><span class="tag">🏰 Czorsztyn ~10 zł/os.</span><span class="tag">🕘 Gondola 9:00–18:00 (7.–8. m.)</span><span class="tag">🚤 Loďky · volitelně</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Zamek+Czorsztyn+ruiny" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://zalewczorsztynski.com/" target="_blank" rel="noopener">🔗 Gondola &amp; půjčovna</a></div></div></div></div>
+      <div class="stop meal-node"><button class="stop-head"><div class="body"><div class="time">15:15–18:00</div><div class="st-title">🛎️ Přejezd do Białky, check-in &amp; večeře</div><div class="st-desc">~40 min do Białky, check-in <b>16:00</b>, pak večeře v hotelu (okno <b>16:00–18:00</b>, máte v ceně).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag warn">🍽️ Večeře jen do 18:00</span><span class="tag">🛎️ Check-in 16:00</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/dir/?api=1&origin=Zamek+Dunajec+Niedzica&destination=Bia%C5%82ka+Tatrza%C5%84ska" target="_blank" rel="noopener">🧭 Trasa do Białky (~40 min)</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">18:15–19:00</div><div class="st-title">🚡 Lanovka Kotelnica (večerní výhled)</div><div class="st-desc">Letní lanovka přímo v obci. <b>V úterý jede do 19:00</b>, po večeři stihnete poslední jízdu na večerní panorama Tater. <b>Není to na západ slunce</b> (ten je ~20:45, to už nejede).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ 33 zł/os. zpáteční</span><span class="tag">🕘 Po–čt 10:00–19:00</span><span class="tag warn">⏰ Poslední jízda ~18:30</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Kotelnica+Bia%C5%82cza%C5%84ska+dolna+stacja" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://bialkatatrzanska.pl/en/summer/price-list/" target="_blank" rel="noopener">🔗 Ceník lanovky</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">19:15–20:15</div><div class="st-title">💧 Przełom Białki za zlatého světla</div><div class="st-desc">Přírodní rezervace 10 min od hotelu, kde si řeka prořezala vápencovou soutěsku. Tyrkysová voda, bílé balvany — nejfotogeničtější místo v okolí, večer nádherné světlo. Kdybyste byli po cestě unavení, klidně vynechte.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag free">🎟️ Zdarma</span><span class="tag">📸 Zlatá hodina</span><span class="tag">⏱️ ~1 h</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Rezerwat+Prze%C5%82om+Bia%C5%82ki" target="_blank" rel="noopener">📍 Navigovat</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">večer</div><div class="st-title">♨️ Wellness v hotelu</div><div class="st-desc">Zakončení dne v hotelovém wellness, které máte v ceně. Ideální relax po cestě a hradech.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🛀 Hotelové wellness (v ceně)</span></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEN 2 ===== -->
+<section class="chapter c-alpine" id="den2">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Den druhý · Středa 23. 7.</span><h2 class="sec-title">Morské oko &amp; Czarny Staw pod Rysami</h2></div>
+    <div class="day-intro reveal"><div class="day-emoji">🏔️</div><div><div class="meta"><span><b>~20–22 km</b></span><span><b>7–9 hodin</b></span><span>převýšení <b>~700 m</b></span></div></div></div>
+
+    <div class="wcard reveal"><div class="wico">⛅</div><div class="wbody"><div class="wtemp">údolí ~20–24 °C · hory ~10–15 °C</div><div class="wnote">Nahoře chladno a vítr, i v létě. Riziko odpolední bouřky — proto brzký start a včasný sestup.</div></div><a class="wlink" href="https://www.pogodairadar.pl/pogoda/bialka-tatrzanska/5592783" target="_blank" rel="noopener">Ověřit →</a></div>
+
+    <div class="alert reveal">
+      <div class="ico">⚠️</div>
+      <div>
+        <h3>Tohle rezervuj předem (ideálně teď)</h3>
+        <p>Parkoviště <b>Palenica Białczańská</b> se rezervuje <b>online</b> a v sezoně bývá vyprodané — bez rezervace tě autem nepustí. Cena dynamicky <b>36–75 zł/auto</b> (s předstihem levněji, v den příjezdu +10 zł). K jezeru je pak <b>~8 km pěšky</b>. Dorazte k závoře do <b>8:00</b>.</p>
+        <a class="cta" href="https://tpn.gov.pl/parkingi-morskie-oko" target="_blank" rel="noopener">Rezervovat parkoviště (TPN) →</a>
+      </div>
+    </div>
+
+    <div class="meals reveal"><span class="meal warn">🥪 Snídani s sebou (start ~6:00)</span><span class="meal">🍲 Oběd u chaty</span><span class="meal">🍽️ Večeře 16:00–18:00 (v ceně)</span></div>
+
+    <div class="drive reveal"><div class="drive-l"><span class="dico">🚗</span><div><b>Białka → Palenica Białczańská</b><small>vyjeďte ~6:00, na parkovišti do 8:00</small></div></div><div class="drive-r"><span class="km">~20–25 min</span><a href="https://www.google.com/maps/dir/?api=1&origin=Bia%C5%82ka+Tatrza%C5%84ska&destination=Palenica+Bia%C5%82cza%C5%84ska+Parking" target="_blank" rel="noopener">🧭 Trasa</a></div></div>
+
+    <div class="callout reveal"><div class="ico">🧭</div><div><h4>Jak to funguje s cestou k jezeru</h4><p>Auto necháte na Palenici, k jezeru vede <b>~8 km asfaltové silnice</b>, kterou většina jde pěšky ~2 h. Kdo nechce jít celou cestu, může část svézt <b>koňským povozem (fasiąg)</b>, ale je drahé a stejně vysadí kus před jezerem. <a href="https://www.google.com/maps/dir/?api=1&origin=Palenica+Bia%C5%82cza%C5%84ska&destination=Morskie+Oko&travelmode=walking" target="_blank" rel="noopener">Trasa pěšky v mapách →</a></p></div></div>
+
+    <div class="trail reveal">
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">6:00–6:30</div><div class="st-title">🌅 Brzký start z Białky</div><div class="st-desc">Snídani s sebou (hotelovou 8–10 nestíháte). Na parkoviště dorazte <b>do 8:00</b>. U vstupu se platí vstup do TPN — kup ho radši online, pokladny mohou být ráno zavřené.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ TPN 10 zł/os. normal</span><span class="tag cash">💵 Pokladna často jen hotově</span><span class="tag">🅿️ Parking 36–75 zł/auto</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Palenica+Bia%C5%82cza%C5%84ska+Parking" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://tpn.gov.pl/parkingi-morskie-oko" target="_blank" rel="noopener">🅿️ Rezervovat parking</a><a class="lbtn book" href="https://tpn.gov.pl/wstep-do-parku" target="_blank" rel="noopener">🎟️ Vstup do TPN</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">7:30–9:30</div><div class="st-title">🥾 Výstup k Morskému oku (~8 km)</div><div class="st-desc">Pohodová, ale dlouhá cesta lesem podél potoka, mírné stoupání po asfaltce. Po cestě toalety. Cíl: chata <b>Schronisko PTTK</b> přímo u jezera (kuchyně v létě 7:00–21:00, jen hotově).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">⏱️ ~2 h jedním směrem</span><span class="tag">🐎 Fasiąg 60–100 zł/os · volitelně</span><span class="tag cash">💵 Chata jen hotově</span></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">9:30–10:30</div><div class="st-title">💚 Morské oko — okruh kolem jezera</div><div class="st-desc">Okruh měří ~2,6 km (~1 h) a pořád se mění výhled na štíty <b>Mięguszowieckých</b> a Mnich. Největší tatranské jezero, 1395 m n. m. Tady se dělají ty pohlednicové fotky.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">⏱️ ~1 h okruh</span><span class="tag">📸 Foto highlight</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Morskie+Oko" target="_blank" rel="noopener">📍 Morské oko</a></div></div></div></div>
+      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">10:30–11:30</div><div class="st-title">⛰️ Výstup k Czarny Staw pod Rysami</div><div class="st-desc">Od Morského oka ještě ~45–60 min nahoru (převýšení ~180 m, strmější). Černé pleso bývá <b>výrazně klidnější</b> a výhled shora na obě jezera je nejlepší odměna dne.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag warn">🥾 Strmější úsek</span><span class="tag">🤫 Míň lidí, víc klidu</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Czarny+Staw+pod+Rysami" target="_blank" rel="noopener">📍 Czarny Staw</a></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">11:30–12:30</div><div class="st-title">🍲 Oběd u chaty</div><div class="st-desc">V Schronisku PTTK teplá polévka (kwaśnica), bigos, legendární šarlotka. Naberte sílu na sestup.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag cash">💵 Platba jen hotově</span><span class="tag">🕘 Kuchyně 7:00–21:00</span></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">12:30–15:00</div><div class="st-title">🚶 Sestup zpět na parkoviště</div><div class="st-desc">Stejná asfaltka dolů, rychlejší. <b>Vyrazte s rezervou před odpoledními bouřkami.</b> Do Białky ~25 min, ať stihnete večeři 16–18.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag warn">⛈️ Pozor na odpolední bouřky</span><span class="tag">🍽️ Zpět na večeři do 18:00</span></div></div></div></div>
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">večer</div><div class="st-title">♨️ Wellness na unavené nohy</div><div class="st-desc">Po 20 km si nohy zaslouží hotelové wellness (v ceně). Nejlepší regenerace před cestou domů.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🛀 Hotelové wellness (v ceně)</span></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEN 3 ===== -->
+<section class="chapter c-rose" id="den3">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Den třetí · Čtvrtek 24. 7.</span><h2 class="sec-title">Dolina Białego, Zakopane &amp; domů</h2></div>
+    <div class="day-intro reveal"><div class="day-emoji">🚠</div><div><div class="meta"><span>Tempo <b>střední</b></span><span>Odjezd domů <b>~17:00</b></span><span>Doma <b>~21:30–22:00</b></span></div></div></div>
+
+    <div class="wcard reveal"><div class="wico">🌤️</div><div class="wbody"><div class="wtemp">~22–25 °C · údolí</div><div class="wnote">Příjemný den v Zakopaném a údolí. V lese Doliny Białego chladněji a vlhko, večer na cestě chládek.</div></div><a class="wlink" href="https://www.yr.no/en/forecast/daily-table/2-776144/Poland/Lesser%20Poland%20Voivodeship/Tatra%20County/Bia%C5%82ka%20Tatrza%C5%84ska" target="_blank" rel="noopener">Ověřit →</a></div>
+
+    <div class="meals reveal"><span class="meal">🍳 Snídaně 8:00–10:00 (v ceně)</span><span class="meal">🧳 Check-out</span><span class="meal">🍽️ Oběd v Zakopaném</span></div>
+
+    <div class="drive reveal"><div class="drive-l"><span class="dico">🚗</span><div><b>Białka → Zakopane (Dolina Białego)</b><small>po snídani a check-outu, ~9:15</small></div></div><div class="drive-r"><span class="km">~30–40 min</span><a href="https://www.google.com/maps/dir/?api=1&origin=Bia%C5%82ka+Tatrza%C5%84ska&destination=Dolina+Bia%C5%82ego+Zakopane" target="_blank" rel="noopener">🧭 Trasa</a></div></div>
+
+    <div class="callout reveal"><div class="ico">⏱️</div><div><h4>Tohle je den na čas</h4><p>Aby ses dostal domů do 23:00 (cesta ~4,5–5 h), vyrazte ze Zakopaného <b>nejpozději ~17:00</b>. Ráno snídaně, check-out a rovnou k Dolině Białego u Zakopaného.</p></div></div>
+
+    <div class="trail reveal">
+      <div class="stop"><button class="stop-head"><div class="body"><div class="time">8:00–9:15</div><div class="st-title">🍳 Snídaně &amp; check-out</div><div class="st-desc">Snídaně v hotelu (8–10, v ceně), sbalit z pokoje, check-out a vyrazit ~9:15 do Zakopaného (~35 min).</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍳 Snídaně do 10:00 (v ceně)</span></div></div></div></div>
+      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">10:00–12:30</div><div class="st-title">🌳 Dolina Białego</div><div class="st-desc">Lehká romantická procházka u Zakopaného — vodopády, potok, les. Klidný start dne po náročné túře, ~2–2,5 h, zdarma. Dá se propojit s vyhlídkou nebo zkrátit.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag free">🎟️ Zdarma</span><span class="tag">⏱️ ~2–2,5 h · lehké</span><span class="tag">💧 Vodopády, potok</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Dolina+Bia%C5%82ego+Zakopane" target="_blank" rel="noopener">📍 Navigovat</a></div></div></div></div>
+      <div class="stop meal-node"><button class="stop-head"><div class="body"><div class="time">12:45–13:45</div><div class="st-title">🍽️ Oběd na Krupówkách</div><div class="st-desc">Pozdní oběd v některé z góralských restaurací na promenádě Krupówki. Vyzkoušejte oscypky, kwaśnicu nebo placki.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🍽️ Oběd si řešíte sami</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Krup%C3%B3wki+Zakopane" target="_blank" rel="noopener">📍 Krupówki</a></div></div></div></div>
+      <div class="stop peak"><button class="stop-head"><div class="body"><div class="time">13:45–16:30</div><div class="st-title">🚠 Gubałówka + Krupówki + oscypki</div><div class="st-desc">Pozemní lanovka <b>Gubałówka</b> (3,5 min nahoru) na panorama Tater — Giewont, Zakopane jako na dlani. Nahoře vyhlídkové terasy. Dole procházka po <b>Krupówkách</b>, nákup pravých <b>oscypků</b>. Spodní stanice je přímo v centru.</div><div class="hint">klikni pro detail</div></div><span class="stop-toggle">+</span></button><div class="stop-more"><div class="stop-more-in"><div class="tags"><span class="tag">🎟️ ~44 zł/os zpáteční (online)</span><span class="tag">🕘 Lanovka 9:00–20:00</span><span class="tag">🅿️ Parking ~20 zł/den</span><span class="tag warn">⏰ V sezoně kup lístek online</span></div><div class="links"><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Kolej+Gubalowka+dolna+stacja" target="_blank" rel="noopener">📍 Navigovat</a><a class="lbtn book" href="https://www.pkl.pl/gubalowka" target="_blank" rel="noopener">🎟️ Koupit lístek (PKL)</a></div></div></div></div>
+    </div>
+
+    <div class="drive reveal"><div class="drive-l"><span class="dico">🏠</span><div><b>Zakopane → Svitavy (domů)</b><small>vyjeďte nejpozději ~17:00 → doma ~21:30–22:00</small></div></div><div class="drive-r"><span class="km">~300 km · ~4,5–5 h</span><a href="https://www.google.com/maps/dir/?api=1&origin=Zakopane&destination=Svitavy" target="_blank" rel="noopener">🧭 Trasa domů</a></div></div>
+  </div>
+</section>
+
+<!-- ===== BONUS ===== -->
+<section class="chapter c-meadow" id="vyslapy">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Bonus · kdyby zbyl čas</span><h2 class="sec-title">Alternativy &amp; půjčovny kol</h2><p class="sec-sub">Věci navíc, kdyby vyšlo počasí nebo zůstal čas. Ber jako zásobník.</p></div>
+    <div class="bonus-grid reveal">
+      <div class="bonus"><div class="em">🐑</div><h4>Rusinowa Polana + Gęsia Szyja</h4><p>Nejhezčí lehká procházka v okolí. Ovce, salaš a čerstvé oscypki. Z vrcholu Gęsia Szyja panorama celých Tater.</p><div class="facts"><div><span>Start</span>Wierch Poroniec (~15 min)</div><div><span>Trasa</span>~3,2 km · ~1 h · lehké</div><div><span>Navíc</span>Gęsia Szyja +45 min</div><div><span>Parking</span>~30 zł · malý, plní se</div></div><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Parking+Wierch+Poroniec" target="_blank" rel="noopener">📍 Navigovat</a></div>
+      <div class="bonus"><div class="em">🏞️</div><h4>Dolina Pięciu Stawów <small>náhrada za den 2</small></h4><p>Údolí pěti tyrkysových ples, podle mnohých ještě hezčí než Morské oko. Náročná celodenní túra ze stejného parkoviště Palenica. Kdybys chtěl místo Morského oka, řekni a přehodím to.</p><div class="facts"><div><span>Start</span>Palenica Białczańská</div><div><span>Charakter</span>Náročné · 7–9 h</div></div><a class="lbtn" href="https://www.google.com/maps/search/?api=1&query=Dolina+Pi%C4%99ciu+Staw%C3%B3w+Polskich" target="_blank" rel="noopener">📍 Navigovat</a></div>
+      <div class="bonus"><div class="em">🚲</div><h4>Půjčovny kol v Białce</h4><p>Kolem jezera Czorsztyn i v okolí Białky jsou hezké cyklotrasy (Velo Czorsztyn). Půjčují horská i elektrokola.</p><div class="facts"><div><span>Waluś Ski</span>půjčovna kol</div><div><span>Ceny</span>ověř na místě · orient.</div></div><a class="lbtn book" href="https://www.walusski.pl/" target="_blank" rel="noopener">🔗 Waluś Ski</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROZPOČET ===== -->
+<section class="chapter c-money" id="rozpocet">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Peníze</span><h2 class="sec-title">Rozpočet — jen atrakce &amp; obědy</h2><p class="sec-sub">Hotel máte koupený i s ubytováním, wellness, snídaněmi a večeřemi. Tady jsou jen atrakce, parkování a obědy pro dva. Kurz 1 zł ≈ 6 Kč, ceny z oficiálních ceníků 2026 (označené „orient." odhad).</p></div>
+    <div class="budget reveal">
+      <div class="brow head"><span>Položka</span><span>zł (2 os.)</span><span>Kč (2 os.)</span></div>
+      <div class="brow"><div class="lbl">Hrad Niedzica <small>den 1 · 2× ~28 zł</small></div><div class="zl">~56 zł</div><div class="kc">~340 Kč</div></div>
+      <div class="brow"><div class="lbl">Přeprava lodí + zřícenina Czorsztyn <small>den 1</small></div><div class="zl">~48 zł</div><div class="kc">~290 Kč</div></div>
+      <div class="brow"><div class="lbl">Parkoviště Palenica + vstup TPN <small>den 2 · auto + 2 os.</small></div><div class="zl">~65 zł</div><div class="kc">~390 Kč</div></div>
+      <div class="brow"><div class="lbl">Oběd u chaty <small>den 2</small></div><div class="zl">~70 zł</div><div class="kc">~420 Kč</div></div>
+      <div class="brow"><div class="lbl">Gubałówka <small>den 3 · 2× ~44 zł</small></div><div class="zl">~88 zł</div><div class="kc">~530 Kč</div></div>
+      <div class="brow"><div class="lbl">Obědy (dny 1 a 3) + oscypki <small>orientačně</small></div><div class="zl">~200 zł</div><div class="kc">~1 200 Kč</div></div>
+      <div class="brow sub"><div class="lbl">Volitelně: lanovka Kotelnica <small>den 1</small></div><div class="zl">~66 zł</div><div class="kc">~400 Kč</div></div>
+      <div class="brow sub"><div class="lbl">Volitelně: loďka na jezeře <small>den 1</small></div><div class="zl">~60 zł</div><div class="kc">~360 Kč</div></div>
+      <div class="brow total"><div class="lbl">Celkem (bez volitelných)</div><div class="zl">~527 zł</div><div class="kc">~3 170 Kč</div></div>
+    </div>
+    <p class="budget-note">S volitelnou lanovkou a loďkou počítej ~650 zł. Ceny lanovek, hradů a půjčoven se sezónně mění — ber jako rozumný odhad. Palivo (~2× ~300 km) sem není započítané.</p>
+  </div>
+</section>
+
+<!-- ===== POČASÍ OBECNĚ + PLÁN B ===== -->
+<section class="chapter c-rain" id="pocasi">
+  <div class="inner">
+    <div class="sec-head reveal"><span class="sec-tag">Počasí obecně &amp; plán B</span><h2 class="sec-title">Ať vás nezaskočí obloha</h2>
+      <p class="sec-sub">U každého dne máš nahoře orientační počasí. Přesnou předpověď ale 6 dní dopředu nikdo spolehlivě neřekne — pár dní před výletem si ji ověř na odkazech níž.</p>
+    </div>
+    <div class="split reveal">
+      <div class="block list">
+        <h4>🌤️ Co čekat koncem července</h4>
+        <ul>
+          <li>Údolí (Białka, Zakopane): dny <b>~20–25 °C</b>, noci ~10–13 °C.</li>
+          <li>Hory (Morské oko, hřebeny): <b>výrazně chladněji a větrněji</b>, i v létě ber vrstvu navíc.</li>
+          <li><b>Odpolední bouřky</b> jsou v Tatrách v létě běžné — proto den 2 startuješ brzy a scházíš dřív.</li>
+          <li>Západ slunce ~20:45, svítá ~4:45 — dlouhé dny.</li>
+        </ul>
+        <div class="links">
+          <a class="lbtn" href="https://www.yr.no/en/forecast/daily-table/2-776144/Poland/Lesser%20Poland%20Voivodeship/Tatra%20County/Bia%C5%82ka%20Tatrza%C5%84ska" target="_blank" rel="noopener">🔗 yr.no Białka</a>
+          <a class="lbtn" href="https://www.pogodairadar.pl/pogoda/bialka-tatrzanska/5592783" target="_blank" rel="noopener">🔗 Radar &amp; hory</a>
+          <a class="lbtn" href="https://meteo.imgw.pl/" target="_blank" rel="noopener">🔗 meteo IMGW</a>
+        </div>
+      </div>
+      <div class="block list">
+        <h4>🌧️ Když bude lít</h4>
+        <ul>
+          <li>Přehodit dny: hrady, Zakopane a wellness na deštivý den, hory na ten hezký.</li>
+          <li>Morské oko jde i za mírného deště, ale <b>Czarny Staw a hřebeny vynech</b> — mokrá žula klouže.</li>
+          <li>Zakopane — kryté Krupówki, restaurace, muzea, nákupy.</li>
+          <li>Hrad Niedzica má krytou prohlídku, déšť nevadí.</li>
+          <li>Hotelové wellness funguje za každého počasí.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="block reveal" style="margin-top:1.2rem">
+      <h4>🎒 Sbal a odškrtej</h4>
+      <ul class="check" id="checklist">
+        <li><span class="box">✓</span> Rezervace parkoviště Palenica (v mobilu)</li>
+        <li><span class="box">✓</span> Lístky Niedzica + Gubałówka koupené online</li>
+        <li><span class="box">✓</span> Hotovost v zł (chata, TPN, parkoviště, oscypki)</li>
+        <li><span class="box">✓</span> Pohorky / pevné boty na den 2</li>
+        <li><span class="box">✓</span> Pláštěnka + vrstva navíc do hor</li>
+        <li><span class="box">✓</span> 2 l vody a svačina na den 2</li>
+        <li><span class="box">✓</span> Snídaně s sebou domluvená s hotelem (den 2)</li>
+        <li><span class="box">✓</span> Plavky &amp; ručník na wellness</li>
+        <li><span class="box">✓</span> Powerbanka (foťák, navigace)</li>
+        <li><span class="box">✓</span> Občanky / pasy na hranici</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="closing reveal">
+  <div class="em">🤍</div>
+  <h2>Ať máte tři dny, na které budete vzpomínat.</h2>
+  <p>Plán je hustý, ale reálný a máte ho pod palcem. Ráno brzy, večer wellness, mezi tím nejhezčí hory kousek od domova — a v klidu domů.</p>
+  <div class="who">Adámek &amp; Karin · 22.–24. 7. 2026</div>
+</section>
+<footer>Ceny a otevírací doby z oficiálních zdrojů (léto 2026), ověřuj 2–3 dny předem<br>lanovky, hrady a půjčovny mění sezónní ceníky · počasí kontroluj na yr.no / meteo.pl</footer>
+
+<script>
+var nav=document.getElementById('nav'),hero=document.getElementById('top');
+new IntersectionObserver(function(e){nav.classList.toggle('show',!e[0].isIntersecting);},{threshold:0,rootMargin:"-60px 0px 0px 0px"}).observe(hero);
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+document.querySelectorAll('.stop-head').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var stop=btn.closest('.stop'),more=stop.querySelector('.stop-more'),open=stop.classList.contains('open');
+    if(open){more.style.maxHeight=more.scrollHeight+'px';requestAnimationFrame(function(){more.style.maxHeight='0px';});stop.classList.remove('open');}
+    else{stop.classList.add('open');more.style.maxHeight=more.scrollHeight+'px';setTimeout(function(){if(stop.classList.contains('open'))more.style.maxHeight='none';},420);}
+  });
+});
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){var ridges=document.querySelectorAll('.ridge');window.addEventListener('scroll',function(){var y=window.scrollY;if(y>window.innerHeight)return;ridges.forEach(function(r){var s=parseFloat(r.getAttribute('data-speed'))||0;r.style.transform='translateY('+(y*s)+'px)';});},{passive:true});}
+document.querySelectorAll('#checklist li').forEach(function(li){li.addEventListener('click',function(){li.classList.toggle('done');});});
+</script>
+</body>
+</html>
